@@ -8,9 +8,9 @@
         $scope.recipeImage = recipeViewRes.images[0].hostedLargeUrl;
         $scope.recipeIngredients = recipeViewRes.ingredientLines;
         $scope.recipeLink = recipeViewRes.source.sourceRecipeUrl;
-      })
-    
-    }
+      });
+
+    };
     $scope.getRecipe();
-    
+
   });
