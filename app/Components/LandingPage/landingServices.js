@@ -7,6 +7,7 @@ angular.module('landing.services',[])
       data: {username: username, password: password}
     });
   };
+  
   var login = function(username,password){
     return $http({
       method: "POST",
@@ -16,6 +17,7 @@ angular.module('landing.services',[])
       return res.data;
     });
   };
+
   return{
     register:register,
     login:login
