@@ -1,11 +1,11 @@
 angular.module ('feastly.landing', [])
-.controller('LandingController', function($scope, $location, Auth){
+.controller('LandingController', function($scope, $location, Auth) {
 
   $scope.username  = "";
   $scope.password  = "";
   $scope.show = false;
 
-  $scope.login = function(){
+  $scope.login = function() {
     Auth.login($scope.username, $scope.password)
     .then(function(match){
       if(match === 'success'){
@@ -13,11 +13,10 @@ angular.module ('feastly.landing', [])
       } else {
         $scope.show = true;
       }
-
     });
-    
   };
-  $scope.register = function(){
+
+  $scope.register = function() {
     Auth.register($scope.username, $scope.password)
     .then(function(){
       console.log("Register Successful");
@@ -25,4 +24,3 @@ angular.module ('feastly.landing', [])
     });
   };
 });
-
