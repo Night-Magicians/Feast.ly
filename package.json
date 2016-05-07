@@ -1,6 +1,6 @@
 {
   "name": "feastly",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Feast.ly is a recipe search app that makes it easy to discover new cuisine.",
   "main": "server.js",
   "scripts": {
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IndigoZone/Feast.ly.git"
+    "url": "git+https://github.com/Night-Magicians/Feast.ly.git"
   },
   "keywords": "recipes, feastly, food",
-  "author": "Kimerie Green, Richard Hong, Andy Nixon, Yeiber Cano",
+  "author": "Dion Fulwood, AJ Farley, Aralya Phinith",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IndigoZone/Feast.ly.git"
+    "url": "https://github.com/Night-Magicians/Feast.ly.git"
   },
   "homepage": "https://github.com/IndigoZone/Feast.ly.git#readme",
   "dependencies": {
@@ -24,6 +24,5 @@
     "body-parser": "^1.15.0",
     "bcrypt-nodejs": "^0.0.3",
     "q": "^1.4.1",
-    "angular-route": "~1.3.16"
   }
 }
