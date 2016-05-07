@@ -1,4 +1,5 @@
 var feastly = angular.module('feastly', [
+  'ngRoute',
   'feastly.recipe',
   'feastly.home',
   'feastly.landing',
