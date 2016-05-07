@@ -25,7 +25,7 @@ feastly.config(function($routeProvider, $httpProvider) {
     })
      .when('/results', {
       templateUrl: 'Components/SearchResults/resultsview.html',
-      controller: 'ResultsController',
+      controller: 'search.ctrl',
       authenticate: true
     })
      .otherwise({redirectTo: '/home'});
@@ -33,7 +33,9 @@ feastly.config(function($routeProvider, $httpProvider) {
 
 // feastly.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
-  // $urlRouterProvider.when('/', 'Components/Homepage/homeview.html')
+  
+//   $urlRouterProvider.when('/', 'Components/Homepage/homeview.html')  
+
 //   $urlRouterProvider.otherwise('/login');
 
 //   $stateProvider
