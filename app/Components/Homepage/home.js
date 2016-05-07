@@ -13,7 +13,7 @@ angular.module ('feastly.home', [])
   $scope.showRecipe = function(value){
     thisRecipe = value
   };
-  
+
   //on query make this call
   // $scope.send = function(){
   //   console.log('send called');
@@ -29,39 +29,19 @@ angular.module ('feastly.home', [])
   //   });
   // };
   //on load, features pages come in
-  $scope.featured = function(){
-    console.log('featured called');
+  $scope.featured = function() {
+    var randIngredients = ['Lemon', 'Salmon', 'Artichoke', 'Blueberry', 'Scone', 'Tumeric', 'Mango', 'Mushroom', 'White Pepper',
+        'Quinoa', 'Sherry', 'Macadamia'];
+    var randIndex = Math.floor(Math.random() * randIngredients.length);
     return $http({
           method: 'GET',
-          url: 'http://api.yummly.com/v1/api/recipes?_app_id=85328aaa&_app_key=9b9c3f69de268c05cd19da7b5bea7a42&q=empanadas'
+          url: 'http://api.yummly.com/v1/api/recipes?_app_id=85328aaa&_app_key=9b9c3f69de268c05cd19da7b5bea7a42&q='+ randIngredients[randIndex] + ''
       }).then(function(res) {
         // console.log(res.data);
         $scope.featured = res.data;
-          return res.data;
+        return res.data;
     });
   };
   //invokes featured() on load
   $scope.featured();
-
-
-   $scope.searchRecipes = function(input){
-    input.toString();
-    $scope.userInput['q'] = input.split(" ").join('+');
-    // console.log('this is the query:', $scope.userInput)
-    Recipes.getRecipes($scope.userInput).then(function(data){
-        console.log('data:',data)
-         $scope.featured = data.data.matches;
-          // console.log('results:', $scope.featured)
-          // console.log('name is:', $scope.featured[0].recipeName)
-        // return data;
-        //Look into this later
-        // if($state.current.url !== '/results'){
-        //   console.log("Inside if Statement", $state.current.url)
-        //   $state.go('results');
-        // } else {
-        //   console.log("no!!!!!!!!!!!")
-        // $state.go($state.current, {}, {reload: true});          
-        // }
-    })
-  };
 });
