@@ -22,7 +22,14 @@
 
   <nav ng-include="'/Shared/Header/headerview.html'"> </nav>
 
-  <ng-view></ng-view>
+<!--   <div id="searchBar">
+    <form ng-controller='search.ctrl'class="form-inline">
+      <input id="searchField" ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
+      <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit">Search</button>
+    </form>
+  </div> -->
+  <div ng-view> </div>
+  <!-- <ng-view ></ng-view> -->
   <!-- <footer ng-include="'/Shared/Footer/footerview.html'"> </footer> -->
 
   <script src="Components/Homepage/home.js"></script>
