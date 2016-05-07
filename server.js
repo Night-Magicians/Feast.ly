@@ -4,7 +4,8 @@ var express = require('express'),
   mongoose = require('mongoose');
 
 //require database
-var db = require('./DB/db.js');
+var userdb = require('./DB/userdb.js');
+var favoritesdb = require('./DB/favoritesdb.js');
 
 //creates server
 var app = express();
@@ -17,14 +18,33 @@ app.use(express.static(__dirname + '/app/'));
 app.use(bodyParser.json());
 
 //mongoose connection
-mongoose.connect('mongodb://IndigoZone:telegraph5@ds019481.mlab.com:19481/heroku_vj69wpp5'); 
+mongoose.connect('mongodb://localhost/feastly');
 
 //connects app and port
 app.listen(port);
 
+//adds favorites
+app.post('/api/favorites', function(req, res) {
+  favoritesdb.create({
+    favorite: req.body.favorite
+  }, function(err, favorite) {
+    res.send('success');
+  });
+});
+
+app.get('/api/favorites', function(req,res) {
+  favoritesdb.find({}, function(err, favs) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.json(favs);
+    }
+  });
+});
+
 //handles register
 app.post('/api/register', function(req,res){
-  db.create({
+  userdb.create({
     username: req.body.username,
     password: req.body.password
   }, function(err, user){
@@ -35,7 +55,7 @@ app.post('/api/register', function(req,res){
 
 //handles login
 app.post('/api/login', function(req,res){
-  db.findOne({username:req.body.username}, function(err, user){
+  userdb.findOne({username:req.body.username}, function(err, user){
     if (err){
       res.send(err);
     } else if(user){
@@ -49,7 +69,7 @@ app.post('/api/login', function(req,res){
 
 });
 
-//prints sucess when the server is running 
+//prints sucess when the server is running
 console.log('Server now listening on port: ', port);
 
 //exports the app server

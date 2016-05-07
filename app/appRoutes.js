@@ -27,10 +27,12 @@ feastly.config(function($routeProvider, $httpProvider) {
 });
 
 // feastly.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+
   
 //   $urlRouterProvider.when('/', 'Components/Homepage/homeview.html')  
+
 //   $urlRouterProvider.otherwise('/login');
-  
+
 //   $stateProvider
 //     .state('home', {
 //       url: '/home',
