@@ -17,8 +17,8 @@ angular.module('feastly.services', [])
     console.log('recipe ID:',value);
     return $http({
       method: 'POST',
-      url: '/api/',
-      data: {id: value}
+      url: '/api/favorites',
+      data: {favorite: value}
     });
   };
 
