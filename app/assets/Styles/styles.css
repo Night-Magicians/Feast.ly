@@ -71,12 +71,10 @@ nav a {
 }
 
 form{
-  margin-top: 300px;
+  margin-top: 10px;
 }
 .form-inline{
-  display: inline-block;
-  margin: 20px auto;
-
+  float:right;
 }
 
 button{
