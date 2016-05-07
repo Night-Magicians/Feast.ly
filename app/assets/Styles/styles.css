@@ -247,3 +247,15 @@ p.footer-brand{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
+
+/*********** Home View ***************/
+
+hr.suggestedRecipes {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+h2.suggestedRecipes {
+  text-align: center;
+}
