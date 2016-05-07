@@ -12,4 +12,8 @@
     };
 
     $scope.getRecipe();
+
+    $scope.postFavorite = function(){
+      Recipe.addFavorite(thisRecipe);
+    }
   });
