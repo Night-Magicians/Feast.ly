@@ -37,7 +37,7 @@ app.get('/api/favorites', function(req,res) {
     if (err) {
       res.send(err);
     } else {
-      res.json(favs);
+      res.send('success');
     }
   });
 });
