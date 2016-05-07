@@ -33,6 +33,7 @@ angular.module('search.services', [])
 
   return {
     getRecipes : getRecipes,
+    getFavorites: getFavorites,
     results: results
   };
 }]);

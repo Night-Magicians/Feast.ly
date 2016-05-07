@@ -22,12 +22,23 @@ mongoose.connect('mongodb://localhost/feastly');
 
 //connects app and port
 app.listen(port);
+
 //adds favorites
 app.post('/api/favorites', function(req, res) {
   favoritesdb.create({
     favorite: req.body.favorite
   }, function(err, favorite) {
     res.send('success');
+  });
+});
+
+app.get('/api/favorites', function(req,res) {
+  favoritesdb.find({}, function(err, favs) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send('success');
+    }
   });
 });
 

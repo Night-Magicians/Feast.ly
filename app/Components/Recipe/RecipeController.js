@@ -16,5 +16,5 @@
     $scope.postFavorite = function(){
       console.log(thisRecipe);
       Recipe.addFavorite(thisRecipe);
-    }
+    };
   });
