@@ -8,7 +8,7 @@ angular.module ('feastly.home', [])
   $scope.showThisOne;
 
   $scope.showRecipe = function(value){
-    thisRecipe = value
+    thisRecipe = value;
   };
 
   //on load, features pages come in
