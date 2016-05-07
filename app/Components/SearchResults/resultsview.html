@@ -17,19 +17,39 @@
 <!-- Page Content -->
 <div class="container-fluid">
 
+   <div class="jumbotron">
+     <div class="container">
+       <h1><span class="headline">Ready For A Dinner Party?<span></h1>
+       <p class="feature-desc">Impress your friends with these quick and easy dishes!</p>
+       <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+     </div>
+   </div>
 
-<!-- Projects Row -->
+<!--   <div id="searchBar">
+    <form ng-controller='search.ctrl'class="form-inline">
+      <input id="searchField" ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
+      <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit">Search</button>
+    </form>
+  </div> -->
+
+  <div id="searchBar" ng-controller='search.ctrl'>
+    <form class="form-inline">
+      <input id="searchField" ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
+      <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit"><a href="#/results">Search</a></button>
+    </form>
 <div class="row">
   <div ng-repeat="recipe in list" class="col-md-4">
-    <a  ui-sref="recipe" ng-click="showRecipe(recipe.id)"><img class="center" ng-src={{recipe.imageUrlsBySize["90"]}} title="rating: {{recipe.rating}}"></a>
+    <a  ng-click="showRecipe(recipe.id)"><img class="center" ng-src={{recipe.imageUrlsBySize["90"]}} title="rating: {{recipe.rating}}"></a>
     <h3>
-      <a class"recipeName" href="#">{{recipe.recipeName}}</a>
+      <a class="recipeName" href="#">{{recipe.recipeName}}</a>
     </h3>
     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p> -->
   </div>
 </div>
-<!-- /.row -->
+  </div>
 
+<!-- Projects Row -->
+<!-- /.row -->
 
 <hr>
 
