@@ -6,5 +6,6 @@ var feastly = angular.module('feastly', [
   'search.services',
   'search.directive',
   'feastly.services',
+  'feastly.favorites',
   'landing.services',
   'ui.router'] );

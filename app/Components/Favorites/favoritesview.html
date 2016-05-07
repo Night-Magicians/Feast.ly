@@ -8,6 +8,21 @@
 
 <section id='myFavorites' class='container' ng-controller="FavoritesController">
     <div class="container">
-      <h1>It Works!</h1>
+      <h1><span class="recipename">{{recipeName}}<span></h1>
+      <img class="center" src={{recipeImage}}>
+      <button type="button" ng-click ="postFavorite()"> + Add to favorites!</button>
+    </div>
+    <div class="container">
+        <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Ingredients</h2>
+          <div class="ingredients" ng-repeat="item in recipeIngredients track by $index">
+            {{item}}
+          </div>
+          <a href={{recipeLink}} target="blank">Click Here for Instructions</a>
+        </div>
+      </div>
+    <hr>
     </div>
 </section>
