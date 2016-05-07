@@ -17,7 +17,7 @@ app.use(express.static(__dirname + '/app/'));
 app.use(bodyParser.json());
 
 //mongoose connection
-mongoose.connect('mongodb://IndigoZone:telegraph5@ds019481.mlab.com:19481/heroku_vj69wpp5'); 
+mongoose.connect('mongodb://IndigoZone:telegraph5@ds019481.mlab.com:19481/heroku_vj69wpp5');
 
 //connects app and port
 app.listen(port);
@@ -49,7 +49,7 @@ app.post('/api/login', function(req,res){
 
 });
 
-//prints sucess when the server is running 
+//prints sucess when the server is running
 console.log('Server now listening on port: ', port);
 
 //exports the app server
