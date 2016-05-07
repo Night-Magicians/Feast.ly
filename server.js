@@ -21,6 +21,14 @@ mongoose.connect('mongodb://IndigoZone:telegraph5@ds019481.mlab.com:19481/heroku
 
 //connects app and port
 app.listen(port);
+//adds favorites
+app.post('/api/favorites', function(req, res) {
+  db.findOne({favorite: favorite}, function(err) {
+    if (favorite) {
+      
+    }
+  });
+});
 
 //handles register
 app.post('/api/register', function(req,res){

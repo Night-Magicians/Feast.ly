@@ -16,9 +16,6 @@ var UserSchema = new mongoose.Schema({
     required: true
   },
 
-  favorites: [{
-    type: String
-  }]
   // salt: String
 });
 
