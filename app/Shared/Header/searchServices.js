@@ -20,12 +20,20 @@ angular.module('search.services', [])
        });
   };
 
+  getFavorites = function() {
+    return $http({
+      method: 'GET',
+      url: '/api/favorites'
+    });
+  };
+
   // getResults = function(){
   //   return results;
   // };
 
   return {
     getRecipes : getRecipes,
+    getFavorites: getFavorites,
     results: results
   };
 }]);
