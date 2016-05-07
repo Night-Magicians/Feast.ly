@@ -17,11 +17,12 @@
 
     <form class="form-inline">
       <input id="searchField" ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
-      <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit"><a href="#/results">Search</a></button>
+      <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit"><a id="searchButton" href="#/results">Search</a></button>
     </form>
    
    <!-- Results from search -->
     <div class="row">
+       <hr class="suggestedRecipes">
       <div ng-repeat="recipe in list" class="col-md-4">
       <a  href="#/recipe" ng-click="showRecipe(recipe.id)"><img class="center" ng-src={{recipe.imageUrlsBySize["90"]}} title="rating: {{recipe.rating}}"></a>
       <h3>

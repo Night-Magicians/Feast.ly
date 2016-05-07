@@ -1,5 +1,5 @@
 /*********** Homeview + Header ***************/
-body{
+body {
   background: #F5F9FA;
 }
 
@@ -14,52 +14,82 @@ body{
     margin-bottom: 0px;
 }
 
-.feature-desc{
+/*.jumbotron {
+    position: relative;
+    background: #000 url("dining.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0px;
+    margin-bottom: 0px;
+}*/
+
+.feature-desc {
   color: #16174f;
 }
 
-.btn.btn-primary.btn-lg{
+.btn.btn-primary.btn-lg {
   background-color:#f2b632;
   font-family:'Roboto', sans-serif;
   font-weight: 100;
   border-color: #f2b632;
 
 }
-.headline{
+.headline {
   /*font-size: 75px;*/
   font-family: 'Marck Script', cursive;
   font-weight: 700;
   color: #16174f;
 }
 
-h2{
+h2 {
   text-align: center;
   font-family:'Roboto', sans-serif;
   font-size: 20px;
 }
 
-  img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 140px;
+  width: auto;
+  border-radius: 25px;
+}
 
-  .btn.btn-default{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+h2.ng-binding {
+  font-size: 23px;
+}
 
-nav{
+.btn.btn-default{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 250px;
+  font-size: 17px;
+}
+
+nav {
   font-family:'Roboto', sans-serif;
   font-weight: 100;
   padding: 0px;
   margin-bottom: 0px;
 }
 
-.navbar-brand{
+.navbar-brand {
 font-family: 'Marck Script', cursive;
 font-weight: 400;
+}
+
+a.navbar-brand {
+  font-size: 50px;
+}
+
+.nav.navbar-nav {
+  font-size: 25px;
+  font-weight: 400;
 }
 
 li a {
@@ -181,8 +211,14 @@ a.already{
   text-align: center;
 }
 
+a#searchButton {
+  font-size: 18px;
+}
+
 #searchField {
   width: 400px;
+  height: 40px;
+  font-size: 20px;
 }
 
 #loginButton {
@@ -258,4 +294,7 @@ hr.suggestedRecipes {
 
 h2.suggestedRecipes {
   text-align: center;
+  font-size: 30px;
+  font-family: fantasy;
+  font-weight: 500;
 }
