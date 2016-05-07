@@ -27,9 +27,7 @@
 // });
 
 feastly.config(function($stateProvider, $urlRouterProvider) {
-    
-  $urlRouterProvider.otherwise('/login');
-  
+
   $stateProvider
     //STATES
      .state('footer', {
@@ -65,4 +63,6 @@ feastly.config(function($stateProvider, $urlRouterProvider) {
       // controller: 'ResultsController',
       authenticate: true
     });
+
+    $urlRouterProvider.otherwise('/login');
 });

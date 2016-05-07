@@ -1,6 +1,6 @@
 var recipeViewRes;
 angular.module('feastly.services', [])
-.factory('Recipe', function ($http) {
+.factory('Recipe', function($http) {
   var showRecipe = function(value) {
     console.log('value:', value);
     return $http({
@@ -12,6 +12,21 @@ angular.module('feastly.services', [])
       console.log(recipeViewRes);
     });
   };
+
+  var addFavorite = function(value) {
+    return $http({
+      method: 'POST',
+      url: '/api/',
+      data: {id: value}
+    });
+  };
+
+  // var showFavorites = function($http) {
+  //   return $http({
+  //     method: 'GET',
+  //     url: 'api/'
+  //   });
+  // };
 
   return {
     showRecipe: showRecipe
