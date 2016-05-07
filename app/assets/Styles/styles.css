@@ -179,6 +179,19 @@ a.already{
 
 /*********** Search Results View ***************/
 
+#searchBar {
+  text-align: center;
+}
+
+#searchField {
+  width: 400px;
+}
+
+#loginButton {
+  position: absolute;
+  right: 0;
+}
+
 img.img-responsive.center {
   display: block;
   margin-left: auto;
