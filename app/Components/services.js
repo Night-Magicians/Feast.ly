@@ -14,6 +14,7 @@ angular.module('feastly.services', [])
   };
 
   var addFavorite = function(value) {
+    console.log('recipe ID:',value);
     return $http({
       method: 'POST',
       url: '/api/',
@@ -29,6 +30,7 @@ angular.module('feastly.services', [])
   // };
 
   return {
-    showRecipe: showRecipe
+    showRecipe: showRecipe,
+    addFavorite: addFavorite
   };
 });
