@@ -32,16 +32,17 @@ angular.module('search.services', [])
     });
   };
 
-  getSearch = function() {
+  getSearches = function() {
     return $http({
       method: 'GET',
       url: '/api/searchHistory'
-    })
+    });
   };
 
   return {
     getRecipes : getRecipes,
     getFavorites: getFavorites,
-    saveSearch: saveSearch
+    saveSearch: saveSearch,
+    getSearches: getSearches
   };
 }]);
