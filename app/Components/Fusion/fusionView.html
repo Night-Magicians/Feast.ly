@@ -13,16 +13,14 @@
     {{item}}
   </h2>
 
-  <div class="fushion-recipe" ng-repeat="recipe in fusionRecipe">
-    <h2>
-      {{recipe.recipeName}}
-    </h2>
-    <img src={{recipe.imageUrlsBySize["90"]}}
-    <h2 id="favoritesIngredients">Ingredients</h2>
+  <div id="fusion-recipe">
+    <h2>{{fusionRecipe.name}}</h2>
+    <img src={{fusionRecipe.images[0].hostedLargeUrl}}>
+    <h2>Instructions</h2>
+    <div class="fusion-instructions" ng-repeat="ingredient in fusionRecipe.ingredientLines track by $index">{{ingredient}}</div>
+    <a id="fusionLink" href={{fusionRecipe.source.sourceRecipeUrl}} target="blank">Click Here for Instructions</a>
+    
   </div>
-    <div id="favoritesIngredientsList" ng-repeat="ingredient in fusionRecipe.ingredients track by $index">{{ingredient}}</div>
-      <a id="favoritesLink" href={{recipe.smallImageUrls[0]}} target="blank">Click Here for Instructions</a>
-    </div>
  
 
 
