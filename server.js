@@ -1,4 +1,3 @@
-// sets up server requirements
 var express = require('express'),
   bodyParser = require('body-parser'),
   mongoose = require('mongoose');
@@ -6,14 +5,14 @@ var express = require('express'),
 //require database
 var userdb = require('./DB/userdb.js');
 var favoritesdb = require('./DB/favoritesdb.js');
-
+var searchdb = require('./DB/searchdb.js');
+var morgan = require('morgan');
 //creates server
 var app = express();
-
-//creates default port
 var port = process.env.PORT || 4444;
 
 //middleware
+app.use(morgan('dev'));
 app.use(express.static(__dirname + '/app/'));
 app.use(bodyParser.json());
 
@@ -22,6 +21,23 @@ mongoose.connect('mongodb://localhost/feastly');
 
 //connects app and port
 app.listen(port);
+
+app.post('/api/searchHistory', function(req,res) {
+  searchdb.create({
+    searchItem: req.body.searchItem
+  }, function(err, search) {
+    res.send('success');
+  });
+});
+
+app.get('/api/searchHistory', function(req,res) {
+  searchdb.find({}, function(err, searches) {
+    if (err) {
+      res.send(err);
+    }
+    res.json(searches);
+  });
+});
 
 //adds favorites
 app.post('/api/favorites', function(req, res) {
@@ -36,30 +52,27 @@ app.get('/api/favorites', function(req,res) {
   favoritesdb.find({}, function(err, favs) {
     if (err) {
       res.send(err);
-    } else {
-      res.json(favs);
     }
+    res.json(favs);
   });
 });
 
-//handles register
-app.post('/api/register', function(req,res){
+app.post('/api/register', function(req,res) {
   userdb.create({
     username: req.body.username,
     password: req.body.password
-  }, function(err, user){
+  }, function(err, user) {
     res.send(user);
   });
 
 });
 
-//handles login
 app.post('/api/login', function(req,res){
-  userdb.findOne({username:req.body.username}, function(err, user){
-    if (err){
+  userdb.findOne({username:req.body.username}, function(err, user) {
+    if (err) {
       res.send(err);
-    } else if(user){
-      if(req.body.password === user.password){
+    } else if (user){
+      if (req.body.password === user.password){
         res.send('success');
       }
     } else {
@@ -69,8 +82,6 @@ app.post('/api/login', function(req,res){
 
 });
 
-//prints sucess when the server is running
 console.log('Server now listening on port: ', port);
 
-//exports the app server
 module.exports = app;
