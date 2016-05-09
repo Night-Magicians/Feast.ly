@@ -9,17 +9,20 @@
 <section id='myFavorites' class='container' ng-controller="FavoritesController">
     <div class="container" ng-repeat="recipe in favorites.results">
       <h1><span class="recipename">{{recipe.name}}<span></h1>
-      <img class="center" src={{recipe.image}}>
-      <div class="row">
-        <div class="col-md-4">
-        <hr>
-          <h2>Ingredients</h2>
-          <div class="ingredients" ng-repeat="item in recipe.ingredients track by $index">
-            {{item}}
-          </div>
-          <a href={{recipe.url}} target="blank">Click Here for Instructions</a>
-        <hr>
+      <div class="container">
+        <div>
+          <img id="favoritesImage" src={{recipe.image}}>
+        </div>
+        <div id="favoritesIngredients" class="row">
+          <div class="col-md-4">
+            <h2 id="favoritesIngredients">Ingredients</h2>
+            <div id="favoritesIngredientsList" class="ingredients" ng-repeat="item in recipe.ingredients track by $index">
+              {{item}}
+            </div>
+            <a id="favoritesLink" href={{recipe.url}} target="blank">Click Here for Instructions</a>
+        </div>
         </div>
       </div>
+      <hr id="favorites">
     </div>
 </section>

@@ -310,3 +310,35 @@ h2.suggestedRecipes {
   font-family: fantasy;
   font-weight: 500;
 }
+
+/*********** Favorites View ***************/
+
+#favoritesImage {
+  float: left;
+  margin-right: 30px;
+  margin-top: 95px;
+  border-radius: 25px;
+  height: 325px;
+  width: auto;
+}
+
+h2#favoritesIngredients {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+div#favoritesIngredientsList {
+  font-size: 20px;
+}
+
+#favoritesLink {
+  font-size: 20px;
+}
+
+hr#favorites {
+  border-top: 4px double #8c8b8b;
+  text-align: center;
+  margin-top: 30px;
+}
+
