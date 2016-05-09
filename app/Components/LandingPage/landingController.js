@@ -1,8 +1,8 @@
 angular.module ('feastly.landing', [])
 .controller('LandingController', function($scope, $location, Auth) {
 
-  $scope.username  = "";
-  $scope.password  = "";
+  $scope.username = "";
+  $scope.password = "";
   $scope.show = false;
 
   $scope.login = function() {

@@ -5,6 +5,7 @@ angular.module('feastly.fusion', [])
   $scope.searchList = [];
   $scope.fusionPair = [];
   $scope.fusionRecipe = {};
+  
   Recipes.getSearches()
     .then(function(res) {
       $scope.searchObj = res.data;
