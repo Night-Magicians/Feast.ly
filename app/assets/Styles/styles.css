@@ -229,6 +229,12 @@ div.row{
   margin-bottom: 200px;
 }
 
+#favsuccess{
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: green;
+}
+
 .recipename{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
