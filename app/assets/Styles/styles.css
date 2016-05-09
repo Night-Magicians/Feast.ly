@@ -357,3 +357,41 @@ h1#favorites {
   text-align: center;
 }
 
+/*********** Recipe View ***************/
+
+h1#singleRecipe {
+  text-align: center;
+}
+
+#recipeImage {
+  float: left;
+  margin-right: 30px;
+  margin-top: 95px;
+  border-radius: 25px;
+  height: 325px;
+  width: auto;
+}
+
+h2#singleIngredients {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+#recipeIngredientsList.ingredients {
+  font-size: 20px;
+}
+
+a#recipeLink {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+button#favoritesButton {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+div#favsuccess {
+  font-size: 20px;
+}

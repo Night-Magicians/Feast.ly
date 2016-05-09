@@ -1,19 +1,29 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1><span class="headline">Lets get this party started!<span></h1>
+    <!-- <p class="feature-desc">Impress your friends with these quick and easy dishes!</p> -->
+    <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+  </div> 
+</div>
+
 <section id='myRecipe' class='container' ng-controller="RecipeViewCtrl">
     <div class="container">
-      <h1><span class="recipename">{{recipeName}}<span></h1>
-        <img class="center" src={{recipeImage}}>
-        <button type="button" ng-click ="postFavorite()"> + Add to favorites!</button>
-        <div id="favsuccess"><i>{{favSuccess}}</i></div>
+      <h1 id="singleRecipe"><span class="recipename">{{recipeName}}<span></h1>
     </div>
     <div class="container">
+      <div>
+        <img id="recipeImage" src={{recipeImage}}>
+      </div>
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
-          <h2>Ingredients</h2>
-          <div class="ingredients" ng-repeat="item in recipeIngredients track by $index">
+        <div id="singleRecipe" class="col-md-4">
+          <h2 id="singleIngredients">Ingredients</h2>
+          <div id="recipeIngredientsList" class="ingredients" ng-repeat="item in recipeIngredients track by $index">
             {{item}}
           </div>
-          <a href={{recipeLink}} target="blank">Click Here for Instructions</a>
+          <a id="recipeLink" href={{recipeLink}} target="blank">Click Here for Instructions</a>
+          <button id="favoritesButton" type="button" ng-click ="postFavorite()"> + Add to favorites!</button>
+          <div id="favsuccess"><i>{{favSuccess}}</i></div>
         </div>
       </div>
       <hr>
