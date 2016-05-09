@@ -327,9 +327,16 @@ hr.suggestedRecipes {
 
 h2.suggestedRecipes {
   text-align: center;
-  font-size: 30px;
-  font-family: fantasy;
+  font-size: 50px;
   font-weight: 500;
+  font-family: 'Neuton', serif;
+}
+
+div.suggestedRecipes {
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(#CDD0D6, #707275);
+
 }
 
 /*********** Favorites View ***************/
