@@ -1,25 +1,28 @@
-<div class="jumbotron">
+<div class="jumbotron" id="favorites">
   <div class="container">
-    <h1><span class="headline">Ready For A Dinner Party?<span></h1>
-    <p class="feature-desc">Impress your friends with these quick and easy dishes!</p>
+    <h1><span id="favoritesBanner" class="headline">Lets get cookin with your favorites!<span></h1>
+    <!-- <p class="feature-desc">Impress your friends with these quick and easy dishes!</p> -->
     <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
   </div> 
 </div>
 
 <section id='myFavorites' class='container' ng-controller="FavoritesController">
     <div class="container" ng-repeat="recipe in favorites.results">
-      <h1><span class="recipename">{{recipe.name}}<span></h1>
-      <img class="center" src={{recipe.image}}>
-      <div class="row">
-        <div class="col-md-4">
-        <hr>
-          <h2>Ingredients</h2>
-          <div class="ingredients" ng-repeat="item in recipe.ingredients track by $index">
-            {{item}}
-          </div>
-          <a href={{recipe.url}} target="blank">Click Here for Instructions</a>
-        <hr>
+      <h1 id="favorites"><span class="recipename">{{recipe.name}}<span></h1>
+      <div class="container">
+        <div>
+          <img id="favoritesImage" src={{recipe.image}}>
+        </div>
+        <div id="favoritesIngredients" class="row">
+          <div class="col-md-4">
+            <h2 id="favoritesIngredients">Ingredients</h2>
+            <div id="favoritesIngredientsList" class="ingredients" ng-repeat="item in recipe.ingredients track by $index">
+              {{item}}
+            </div>
+            <a id="favoritesLink" href={{recipe.url}} target="blank">Click Here for Instructions</a>
+        </div>
         </div>
       </div>
+      <hr id="favorites">
     </div>
 </section>
