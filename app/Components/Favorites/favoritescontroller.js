@@ -17,7 +17,6 @@ angular.module ('feastly.favorites', [])
   $scope.getFavs();
 
   $scope.showFavs = function(favRecipe){
-        console.log("What is favRecipe??::", favRecipe);
         $scope.favorites.results.push({
             name: favRecipe.name,
             image: favRecipe.images[0].hostedLargeUrl,

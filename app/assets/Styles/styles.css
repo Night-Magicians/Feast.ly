@@ -499,3 +499,7 @@ div#favsuccess {
   text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
 }
 
+#fusionMessage {
+  text-align: center;
+}
+
