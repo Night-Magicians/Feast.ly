@@ -26,7 +26,7 @@
     </form>
     
     <div class="row">
-  <div ng-repeat="recipe in list" class="col-md-4">
+    <div ng-repeat="recipe in list" class="col-md-4">
     <a  ng-click="showRecipe(recipe.id)"><img class="center" ng-src={{recipe.imageUrlsBySize["90"]}} title="rating: {{recipe.rating}}"></a>
     <h3>
       <h2 class="recipeName" href="#">{{recipe.recipeName}}</h2>
