@@ -1,12 +1,12 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
   mongoose = require('mongoose');
-  morgan = require('morgan');
 
 //require database
 var userdb = require('./DB/userdb.js');
 var favoritesdb = require('./DB/favoritesdb.js');
-
+var searchdb = require('./DB/searchdb.js');
+var morgan = require('morgan');
 //creates server
 var app = express();
 var port = process.env.PORT || 4444;

@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
-var SearchHistory = new mongoose.Schema({
-  item: {
-    type: string,
+var SearchHistorySchema = new mongoose.Schema({
+  searchItem: {
+    type: String,
     unique: true
   }
 });
 
-module.exports = mongoose.model('searchHistory', SearchHistory);
+module.exports = mongoose.model('searchHistory', SearchHistorySchema);

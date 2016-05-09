@@ -24,10 +24,11 @@ angular.module('search.services', [])
     });
   };
 
-  saveSearch = function() {
+  saveSearch = function(searchItem) {
     return $http({
       method: 'POST',
-      url:'/api/searchHistory'
+      url:'/api/searchHistory',
+      data: {searchItem: searchItem}
     });
   };
 
