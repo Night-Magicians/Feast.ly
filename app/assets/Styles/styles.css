@@ -1,6 +1,7 @@
 /*********** Homeview + Header ***************/
 body {
-  background: #A8F0C9;
+/*  background: #A8F0C9;*/
+background: linear-gradient(135deg, #ADD5F7, #A8F0C9);
 }
 
 .jumbotron#homeview {
@@ -12,6 +13,10 @@ body {
     overflow: hidden;
     padding: 0px;
     margin-bottom: 0px;
+}
+
+h1#bannerTitle {
+  text-align: center;
 }
 
 p#learnMore {
@@ -78,6 +83,7 @@ nav {
   font-weight: 100;
   padding: 0px;
   margin-bottom: 0px;
+  margin-top: 10px;
 }
 
 .navbar-brand {
@@ -87,6 +93,7 @@ font-weight: 400;
 
 a.navbar-brand {
   font-size: 50px;
+  color: #F1330A;
 }
 
 .nav.navbar-nav {
