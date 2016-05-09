@@ -16,6 +16,7 @@ angular.module('feastly.fusion', [])
       var randIndex2 = Math.floor(Math.random() * $scope.searchList.length);
       $scope.fusionPair.push($scope.searchList[randIndex1]);
       $scope.fusionPair.push($scope.searchList[randIndex2]);
+      console.log("This is what should be displaying", $scope.fusionPair);
     });
 
 });
