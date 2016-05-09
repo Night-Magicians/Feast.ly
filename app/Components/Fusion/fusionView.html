@@ -12,6 +12,17 @@
   <h2 id="fusion-pairs" ng-repeat="item in fusionPair track by $index">
     {{item}}
   </h2>
+
+  <div class="fushion-recipe" ng-repeat="recipe in fusionRecipe">
+    <h2>
+      {{recipe.recipeName}}
+    </h2>
+    <img src={{recipe.imageUrlsBySize["90"]}}
+    <h2 id="favoritesIngredients">Ingredients</h2>
+  </div>
+    <div id="favoritesIngredientsList" ng-repeat="ingredient in fusionRecipe.ingredients track by $index">{{ingredient}}</div>
+      <a id="favoritesLink" href={{recipe.smallImageUrls[0]}} target="blank">Click Here for Instructions</a>
+    </div>
  
 
 
