@@ -1,6 +1,7 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
   mongoose = require('mongoose');
+  morgan = require('morgan');
 
 //require database
 var userdb = require('./DB/userdb.js');
@@ -8,7 +9,6 @@ var favoritesdb = require('./DB/favoritesdb.js');
 
 //creates server
 var app = express();
-var morgan = require('morgan');
 var port = process.env.PORT || 4444;
 
 //middleware
@@ -57,22 +57,22 @@ app.get('/api/favorites', function(req,res) {
   });
 });
 
-app.post('/api/register', function(req,res){
+app.post('/api/register', function(req,res) {
   userdb.create({
     username: req.body.username,
     password: req.body.password
-  }, function(err, user){
+  }, function(err, user) {
     res.send(user);
   });
 
 });
 
 app.post('/api/login', function(req,res){
-  userdb.findOne({username:req.body.username}, function(err, user){
-    if (err){
+  userdb.findOne({username:req.body.username}, function(err, user) {
+    if (err) {
       res.send(err);
-    } else if(user){
-      if(req.body.password === user.password){
+    } else if (user){
+      if (req.body.password === user.password){
         res.send('success');
       }
     } else {

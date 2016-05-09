@@ -13,8 +13,9 @@ angular.module ('feastly.home', [])
 
   //on load, features pages come in
   $scope.featured = function() {
-    var randIngredients = ['Lemon', 'Salmon', 'Artichoke', 'Blueberry', 'Scone', 'Tumeric', 'Mango', 'Mushroom', 'White Pepper',
-        'Quinoa', 'Sherry', 'Macadamia'];
+    var randIngredients = [
+      'Lemon','Salmon','Artichoke','Blueberry','Scone','Tumeric','Mango',
+      'Mushroom','White Pepper','Quinoa','Sherry','Macadamia', 'Pine Nut'];
     var randIndex = Math.floor(Math.random() * randIngredients.length);
     return $http({
           method: 'GET',
@@ -24,6 +25,7 @@ angular.module ('feastly.home', [])
         return res.data;
     });
   };
+  
   //invokes featured() on load
   $scope.featured();
 });
