@@ -265,6 +265,18 @@ div.row{
   margin-bottom: 200px;
 }
 
+#favsuccess{
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: green;
+  animation: fadein 5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .recipename{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
