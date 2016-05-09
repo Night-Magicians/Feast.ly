@@ -9,4 +9,4 @@ var feastly = angular.module('feastly', [
   'feastly.favorites',
   'feastly.fusion',
   'landing.services',
-  'ui.router'] );
+  'ui.router']);
