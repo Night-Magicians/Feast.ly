@@ -1,20 +1,20 @@
  angular.module ('feastly.recipe', [])
 
-  .controller('RecipeViewCtrl', function($scope, Recipe) {
-    $scope.favSuccess = '';
-    $scope.getRecipe = function() {
-      Recipe.showRecipe(thisRecipe).then(function() {
-        $scope.recipeName = recipeViewRes.name;
-        $scope.recipeImage = recipeViewRes.images[0].hostedLargeUrl;
-        $scope.recipeIngredients = recipeViewRes.ingredientLines;
-        $scope.recipeLink = recipeViewRes.source.sourceRecipeUrl;
-      });
-    };
+.controller('RecipeViewCtrl', function($scope, Recipe) {
+  $scope.favSuccess = '';
+  $scope.getRecipe = function() {
+    Recipe.showRecipe(thisRecipe).then(function() {
+      $scope.recipeName = recipeViewRes.name;
+      $scope.recipeImage = recipeViewRes.images[0].hostedLargeUrl;
+      $scope.recipeIngredients = recipeViewRes.ingredientLines;
+      $scope.recipeLink = recipeViewRes.source.sourceRecipeUrl;
+    });
+  };
 
-    $scope.getRecipe();
+  $scope.getRecipe();
 
-    $scope.postFavorite = function(){
-      Recipe.addFavorite(thisRecipe);
-      $scope.favSuccess = 'Added to Favorites!';
-    };
-  });
+  $scope.postFavorite = function(){
+    Recipe.addFavorite(thisRecipe);
+    $scope.favSuccess = 'Added to Favorites!';
+  };
+});

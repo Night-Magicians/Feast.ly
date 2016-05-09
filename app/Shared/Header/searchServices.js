@@ -2,7 +2,6 @@ var results = ['hola', 'hello'];
 angular.module('search.services', [])
 
 .factory('Recipes', ['$http', '$q',function($http, $q){
-  // var results;
   getRecipes = function(criteria) {
     return $http({
           method: 'GET',

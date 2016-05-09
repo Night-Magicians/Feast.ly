@@ -25,7 +25,6 @@ angular.module ('feastly.home', [])
         return res.data;
     });
   };
-  
-  //invokes featured() on load
+
   $scope.featured();
 });
