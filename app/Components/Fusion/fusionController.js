@@ -31,7 +31,6 @@ angular.module('feastly.fusion', [])
             url: 'http://api.yummly.com/v1/api/recipe/' + $scope.fusionRecipeid + '?_app_id=85328aaa&_app_key=9b9c3f69de268c05cd19da7b5bea7a42'
           }).then(function(res) {
             $scope.fusionRecipe = res.data;
-            console.log("What is $scope.fushionRecipe", $scope.fusionRecipe);
           });
         });
     });
