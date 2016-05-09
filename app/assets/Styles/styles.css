@@ -5,7 +5,7 @@ body {
 
 .jumbotron#homeview {
     position: relative;
-    background: #000 url("homeview.jpg") center center;
+    background: #000 url("test1.jpg") center center;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -15,22 +15,7 @@ body {
 }
 
 #homeviewBanner {
-  color: rgb(16, 11, 189);
-}
-
-.jumbotron#favorites {
-    position: relative;
-    background: #000 url("favorites.jpg") center center;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    overflow: hidden;
-    padding: 0px;
-    margin-bottom: 0px;
-}
-
-#favoritesBanner {
-  color: #f2b632;
+  color: rgb(243, 255, 63);
 }
 
 .jumbotron#recipe {
@@ -45,7 +30,7 @@ body {
 }
 
 .feature-desc {
-  color: #16174f;
+  color: rgb(243, 255, 63);
 }
 
 .btn.btn-primary.btn-lg {
@@ -350,6 +335,22 @@ h2.suggestedRecipes {
   border-radius: 25px;
   height: 325px;
   width: auto;
+}
+
+.jumbotron#favorites {
+    position: relative;
+    background: #000 url("favorites.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+#favoritesBanner {
+  color: #f2b632;
+  font-size: 70px;
 }
 
 h2#favoritesIngredients {
