@@ -9,10 +9,10 @@ var favoritesdb = require('./DB/favoritesdb.js');
 //creates server
 var app = express();
 var morgan = require('morgan');
-app.use(morgan('dev'));
 var port = process.env.PORT || 4444;
 
 //middleware
+app.use(morgan('dev'));
 app.use(express.static(__dirname + '/app/'));
 app.use(bodyParser.json());
 
