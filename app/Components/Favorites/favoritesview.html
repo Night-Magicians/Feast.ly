@@ -8,7 +8,7 @@
 
 <section id='myFavorites' class='container' ng-controller="FavoritesController">
     <div class="container" ng-repeat="recipe in favorites.results">
-      <h1><span class="recipename">{{recipe.name}}<span></h1>
+      <h1 id="favorites"><span class="recipename">{{recipe.name}}<span></h1>
       <div class="container">
         <div>
           <img id="favoritesImage" src={{recipe.image}}>

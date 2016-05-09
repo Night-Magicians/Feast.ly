@@ -342,3 +342,7 @@ hr#favorites {
   margin-top: 30px;
 }
 
+h1#favorites {
+  text-align: center;
+}
+
