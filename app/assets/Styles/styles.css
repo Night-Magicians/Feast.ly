@@ -3,9 +3,9 @@ body {
   background: #F5F9FA;
 }
 
-.jumbotron {
+.jumbotron#homeview {
     position: relative;
-    background: #000 url("food-healthy-hand-cooking.jpg") center center;
+    background: #000 url("homeview.jpg") center center;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -14,16 +14,35 @@ body {
     margin-bottom: 0px;
 }
 
-/*.jumbotron {
+#homeviewBanner {
+  color: rgb(16, 11, 189);
+}
+
+.jumbotron#favorites {
     position: relative;
-    background: #000 url("dining.jpg") center center;
+    background: #000 url("favorites.jpg") center center;
     width: 100%;
     height: 100%;
     background-size: cover;
     overflow: hidden;
     padding: 0px;
     margin-bottom: 0px;
-}*/
+}
+
+#favoritesBanner {
+  color: #f2b632;
+}
+
+.jumbotron#recipe {
+    position: relative;
+    background: #000 url("singleRecipe.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0px;
+    margin-bottom: 0px;
+}
 
 .feature-desc {
   color: #16174f;
