@@ -1,14 +1,14 @@
 /*********** Homeview + Header ***************/
 body {
 /*  background: #A8F0C9;*/
-background: linear-gradient(135deg, #ADD5F7, #A8F0C9);
+background: linear-gradient(#2C9478,#298E94, #09575E);
 }
 
 .jumbotron#homeview {
     position: relative;
     background: #000 url("homeview1.jpg") center center;
     width: 100%;
-    height: 350px;
+    height: 500px;
     background-size: cover;
     overflow: hidden;
     padding: 0px;
@@ -93,12 +93,13 @@ font-weight: 400;
 }
 
 a.navbar-brand {
-  font-size: 50px;
-  color: #F1330A;
+  font-size: 75px;
+  color: #FF3800;
+  text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
 }
 
 .nav.navbar-nav {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 400;
 }
 
@@ -222,13 +223,14 @@ a.already{
 }
 
 #searchButton {
-  font-size: 18px;
+  font-size: 28px;
+  margin-left: 5px;
 }
 
 #searchField {
-  width: 400px;
-  height: 40px;
-  font-size: 20px;
+  width: 550px;
+  height: 60px;
+  font-size: 25px;
 }
 
 #loginButton {
@@ -298,8 +300,10 @@ p.footer-brand{
 
 hr.suggestedRecipes {
   height: 10px;
-  border: 0;
+  border: 1;
   box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  color: #FFFCC4;
+  width: 1700px;
 }
 
 h2.suggestedRecipes {
@@ -324,7 +328,7 @@ h2.suggestedRecipes {
     position: relative;
     background: #000 url("favorites1.jpg") center center;
     width: 100%;
-    height: 350px;
+    height: 500px;
     background-size: cover;
     overflow: hidden;
     padding: 0px;
@@ -352,13 +356,21 @@ div#favoritesIngredientsList {
 }
 
 hr#favorites {
-  border-top: 4px double #8c8b8b;
   text-align: center;
   margin-top: 30px;
+   color: #FFFCC4;
 }
 
 h1#favorites {
   text-align: center;
+}
+
+section#myFavorites {
+  width: 2000px;
+}
+
+div.container.ng-scope {
+  width: 1700px;
 }
 
 /*********** Recipe View ***************/
@@ -367,7 +379,7 @@ h1#favorites {
     position: relative;
     background: #000 url("singleRecipe.jpg") center center;
     width: 100%;
-    height: 350px;
+    height: 500px;
     background-size: cover;
     overflow: hidden;
     padding: 0px;
@@ -394,8 +406,9 @@ h1#favorites {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 70px;
-  color:#f2b632;
+  /*color:#f2b632;*/
   text-align: center;
+  color: white;
 }
 
 h1#singleRecipe {
@@ -447,7 +460,7 @@ div#favsuccess {
     position: relative;
     background: #000 url("fusion.jpg") center center;
     width: 100%;
-    height: 350px;
+    height: 500px;
     background-size: cover;
     overflow: hidden;
     padding: 0px;
