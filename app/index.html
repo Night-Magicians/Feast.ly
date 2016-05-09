@@ -22,31 +22,15 @@
 
   <nav ng-include="'/Shared/Header/headerview.html'"> </nav>
 
-<!--   <div id="searchBar">
-    <form ng-controller='search.ctrl'class="form-inline">
-      <input id="searchField" ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
-      <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit">Search</button>
-    </form>
-  </div> -->
   <div ng-view> </div>
-  <!-- <ng-view ></ng-view> -->
-  <!-- <footer ng-include="'/Shared/Footer/footerview.html'"> </footer> -->
 
   <script src="Components/Homepage/home.js"></script>
   <script src="Shared/Header/searchServices.js"></script>
   <script src="Shared/Header/searchdirective.js"></script>
-  <!-- <script src="Components/Homepage/homeservices.js"></script> -->
   <script src="Components/LandingPage/landingController.js"></script>
   <script src="Components/LandingPage/landingServices.js"></script>
-
-  <!-- Dummy Data - Remove when real data features implemented -->
-  <script src="Components/Recipe/recipeResultsExample.js"></script>
-
   <script src="Components/Recipe/RecipeController.js"></script>
   <script src="Components/Favorites/FavoritesController.js"></script>
-  <!-- <script src="Components/Recipe/RecipeServices.js"></script> -->
-  <!-- <script src="Components/SearchResults/resultscontroller.js"></script> -->
-  <!-- <script src="Components/SearchResults/resultsservice.js"></script> -->
   <script src="Components/services.js"></script>
   <script src="appModule.js"></script>
   <script src="appRoutes.js"></script>
