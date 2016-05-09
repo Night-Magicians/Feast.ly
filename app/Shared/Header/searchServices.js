@@ -24,8 +24,16 @@ angular.module('search.services', [])
     });
   };
 
+  saveSearch = function() {
+    return $http({
+      method: 'POST',
+      url:'/api/searchHistory'
+    });
+  };
+
   return {
     getRecipes : getRecipes,
-    getFavorites: getFavorites
+    getFavorites: getFavorites,
+    saveSearch: saveSearch
   };
 }]);
