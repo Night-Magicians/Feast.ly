@@ -285,15 +285,26 @@ div.row{
   text-align: center;
 }
 /*********** Footer View ***************/
+
+footer {
+  font-size: 18px;
+}
+
 p.footer-links>a{
   color:#4F682C;
   font-family:'Roboto', sans-serif;
   font-weight: 100;
 }
+
+.footer-links {
+  text-align: center;
+}
+
 p.footer-brand{
   color:#4F682C;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  text-align: center;
 }
 
 /*********** Home View ***************/
