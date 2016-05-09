@@ -9,6 +9,11 @@ feastly.config(function($routeProvider, $httpProvider) {
       templateUrl: 'Components/LandingPage/register.html',
       controller: 'LandingController'
     })
+    .when('/favorites', {
+      templateUrl:'Components/Favorites/favoritesview.html',
+      controller:'FavoritesController',
+      authenticate: true
+     })
     .when('/login', {
       templateUrl: 'Components/LandingPage/login.html',
       controller: 'LandingController'
