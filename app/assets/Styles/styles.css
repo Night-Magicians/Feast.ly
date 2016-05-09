@@ -288,7 +288,7 @@ div.row{
   margin-top: 10px;
   font-size: 1.2em;
   color: green;
-  animation: fadein 5s;
+  animation: fadein 5.5s;
 }
 
 @keyframes fadein {

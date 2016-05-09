@@ -1,4 +1,5 @@
 feastly.config(function($routeProvider, $httpProvider) {
+
   $routeProvider
     .when('/home', {
       templateUrl: 'Components/Homepage/homeview.html',
@@ -25,5 +26,6 @@ feastly.config(function($routeProvider, $httpProvider) {
       templateUrl: 'Components/LandingPage/login.html',
       controller: 'LandingController'
     })
+
     .otherwise({redirectTo: '/home'});
 });
