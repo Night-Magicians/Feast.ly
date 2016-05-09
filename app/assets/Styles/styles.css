@@ -28,8 +28,9 @@ p#learnMore {
 }
 
 #homeviewBanner {
-  color: rgb(10, 3, 249);
+  color: rgb(194, 140, 255);
   font-size: 80px;
+  text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
 }
 
 /*.feature-desc {
@@ -331,8 +332,9 @@ h2.suggestedRecipes {
 }
 
 #favoritesBanner {
-  color: #2E06EC;
+  color: rgb(194, 140, 255);
   font-size: 80px;
+  text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
 }
 
 h2#favoritesIngredients {
@@ -433,6 +435,12 @@ div#favsuccess {
   font-size: 20px;
 }
 
+#recipeBanner {
+  color: rgb(194, 140, 255);
+  font-size: 70px;
+  text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
+}
+
 /*********** Fusion View ***************/
 
 .jumbotron#fusion {
@@ -447,6 +455,7 @@ div#favsuccess {
 }
 
 #fusionBanner {
-  color: #2E06EC;
+  color: rgb(194, 140, 255);
   font-size: 70px;
+  text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
 }
