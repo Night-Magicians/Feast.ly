@@ -32,6 +32,13 @@ angular.module('search.services', [])
     });
   };
 
+  getSearch = function() {
+    return $http({
+      method: 'GET',
+      url: '/api/searchHistory'
+    })
+  };
+
   return {
     getRecipes : getRecipes,
     getFavorites: getFavorites,
