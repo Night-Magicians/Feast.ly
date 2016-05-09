@@ -6,6 +6,7 @@ angular.module('feastly.fusion', [])
   $scope.fusionPair = [];
   $scope.fusionRecipe = {};
   $scope.fusionRecipeid = '';
+
   Recipes.getSearches()
     .then(function(res) {
       $scope.searchObj = res.data;
@@ -18,6 +19,7 @@ angular.module('feastly.fusion', [])
       var randIndex2 = Math.floor(Math.random() * $scope.searchList.length);
       $scope.fusionPair.push($scope.searchList[randIndex1]);
       $scope.fusionPair.push($scope.searchList[randIndex2]);
+
       var searchPair = $scope.fusionPair.join(' ');
       return $http({
             method: 'GET',
@@ -29,9 +31,9 @@ angular.module('feastly.fusion', [])
             url: 'http://api.yummly.com/v1/api/recipe/' + $scope.fusionRecipeid + '?_app_id=85328aaa&_app_key=9b9c3f69de268c05cd19da7b5bea7a42'
           }).then(function(res) {
             $scope.fusionRecipe = res.data;
+            console.log("What is $scope.fushionRecipe", $scope.fusionRecipe);
           });
         });
-
     });
 
 });

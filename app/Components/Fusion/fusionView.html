@@ -1,10 +1,27 @@
-<section>
+<section ng-controller="FusionController">
   <div class="jumbotron">
     <div class="container">
       <h1><span class="headline">Ready For A Dinner Party?<span></h1>
       <p class="feature-desc">Impress your friends with these quick and easy dishes!</p>
       <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
     </div>
+  </span>
   </div>
+  
+  <h1>Items to be Fused</h1>
+  <h2 id="fusion-pairs" ng-repeat="item in fusionPair track by $index">
+    {{item}}
+  </h2>
+
+  <div id="fusion-recipe">
+    <h2>{{fusionRecipe.name}}</h2>
+    <img src={{fusionRecipe.images[0].hostedLargeUrl}}>
+    <h2>Instructions</h2>
+    <div class="fusion-instructions" ng-repeat="ingredient in fusionRecipe.ingredientLines track by $index">{{ingredient}}</div>
+    <a id="fusionLink" href={{fusionRecipe.source.sourceRecipeUrl}} target="blank">Click Here for Instructions</a>
+    
+  </div>
+ 
+
 
 </section>
