@@ -2,6 +2,7 @@
 body {
 /*  background: #A8F0C9;*/
 background: linear-gradient(#2C9478,#298E94, #09575E);
+font-family: 'Neuton', serif;
 }
 
 .jumbotron#homeview {
@@ -12,23 +13,27 @@ background: linear-gradient(#2C9478,#298E94, #09575E);
     background-size: cover;
     overflow: hidden;
     padding: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+
 }
 
 h1#bannerTitle {
   text-align: center;
+  color: red;
 }
 
 p#learnMore {
   margin-left: 40px;
-  font-size: 21px;
+  font-size: 60px;
   font-weight: 200;
   position: absolute;
   bottom: 0;
 }
 
 #homeviewBanner {
-  color: rgb(194, 140, 255);
+  color: #FF3800;
   font-size: 80px;
   text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
 }
@@ -39,9 +44,9 @@ p#learnMore {
 
 .btn.btn-primary.btn-lg {
   background-color:#f2b632;
-  font-family:'Roboto', sans-serif;
   font-weight: 100;
   border-color: #f2b632;
+  font-size: 40px;
 
 }
 .headline {
@@ -80,7 +85,6 @@ h2.ng-binding {
 }
 
 nav {
-  font-family:'Roboto', sans-serif;
   font-weight: 100;
   padding: 0px;
   margin-bottom: 0px;
@@ -108,7 +112,7 @@ li a {
 }
 
 nav a {
-  color:#4F682C;
+  color:#ffffff;
 }
 
 form{
@@ -120,7 +124,6 @@ form{
 
 button{
   background-color:#f2b632;
-  font-family:'Roboto', sans-serif;
   font-weight: 100;
   color: #fff;
 }
@@ -302,10 +305,12 @@ p.footer-links>a{
   color:#4F682C;
   font-family:'Roboto', sans-serif;
   font-weight: 100;
+  color: white;
 }
 
 .footer-links {
   text-align: center;
+  color: white;
 }
 
 p.footer-brand{
@@ -313,6 +318,7 @@ p.footer-brand{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   text-align: center;
+  color: white;
 }
 
 /*********** Home View ***************/
@@ -330,14 +336,17 @@ h2.suggestedRecipes {
   font-size: 50px;
   font-weight: 500;
   font-family: 'Neuton', serif;
+  color: white;
+  text-decoration: underline;
+  margin-bottom: 50px;
 }
 
-div.suggestedRecipes {
+/*div.suggestedRecipes {
   height: 100px;
   width: 100%;
   background: linear-gradient(#CDD0D6, #707275);
 
-}
+}*/
 
 /*********** Favorites View ***************/
 
@@ -352,17 +361,19 @@ div.suggestedRecipes {
 
 .jumbotron#favorites {
     position: relative;
-    background: #000 url("favorites1.jpg") center center;
+    background: #000 url("favorites2.jpg") center center;
     width: 100%;
     height: 500px;
     background-size: cover;
     overflow: hidden;
     padding: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 #favoritesBanner {
-  color: rgb(194, 140, 255);
+  color: #FF3800;
   font-size: 80px;
   text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
 }
@@ -370,11 +381,18 @@ div.suggestedRecipes {
 h2#favoritesIngredients {
   font-size: 40px;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+
 }
 
 div#favoritesIngredientsList {
   font-size: 20px;
+}
+
+div#favoritesIngredients {
+  background-color: white;
+  border-radius: 50px;
+  padding: 20px;
+  text-align: center;
 }
 
 #favoritesLink {
@@ -389,6 +407,8 @@ hr#favorites {
 
 h1#favorites {
   text-align: center;
+  color: white;
+  text-decoration: underline;
 }
 
 section#myFavorites {
@@ -409,7 +429,9 @@ div.container.ng-scope {
     background-size: cover;
     overflow: hidden;
     padding: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 #myrecipe{
@@ -450,6 +472,13 @@ h1#singleRecipe {
   width: auto;
 }
 
+div#singleRecipe {
+  background-color: white;
+  border-radius: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
 h2#singleIngredients {
   font-size: 40px;
   text-align: center;
@@ -475,7 +504,7 @@ div#favsuccess {
 }
 
 #recipeBanner {
-  color: rgb(194, 140, 255);
+  color: #FF3800;
   font-size: 70px;
   text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
 }
@@ -490,16 +519,57 @@ div#favsuccess {
     background-size: cover;
     overflow: hidden;
     padding: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 #fusionBanner {
-  color: rgb(194, 140, 255);
+  color: #FF3800;
   font-size: 70px;
   text-shadow: -1px -1px 0px #000, 0px -1px 0px #000, 1px -1px 0px #000, -1px 0px 0px #000, 1px 0px 0px #000, -1px 1px 0px #000, 0px 1px 0px #000, 1px 1px 0px #000;
 }
 
 #fusionMessage {
   text-align: center;
+  font-size: 40px;
+  color: #FFFCC4;
 }
 
+div.fusionContainer {
+  background-color: #ffffff;
+  border-radius: 50px;
+  /*position: relative;*/
+  padding: 30px;
+  margin: 20px;
+}
+
+#fusionImage {
+  float: left;
+  margin-right: 30px;
+  margin-top: 85px;
+  border-radius: 25px;
+  width: auto;
+  /*height: 300px;*/
+  /*position: absolute;*/
+  top: 50%;
+}
+
+#fusionIngredients {
+  margin-left: 20px;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+#fusionPair {
+  font-size: 60px;
+  font-weight: 700;
+  color: #FFFCC4;
+}
+
+h1#fusion {
+  text-align: center;
+  text-decoration: underline;
+  color: white;
+}
