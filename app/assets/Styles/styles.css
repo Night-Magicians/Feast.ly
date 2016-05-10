@@ -482,7 +482,6 @@ div#singleRecipe {
 h2#singleIngredients {
   font-size: 40px;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
 }
 
 #recipeIngredientsList.ingredients {
