@@ -1,27 +1,32 @@
+
 <section ng-controller="FusionController">
-  <div class="jumbotron">
+  <div class="jumbotron" id="fusion">
     <div class="container">
-      <h1><span class="headline">Ready For A Dinner Party?<span></h1>
-      <p class="feature-desc">Impress your friends with these quick and easy dishes!</p>
-      <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      <h1 id="bannerTitle"><span id="fusionBanner" class="headline">Ready for a delicous cocktail of ingredients!</span></h1>
     </div>
-  </span>
+    <p id="learnMore"><a href="http://www.staggeringbeauty.com/" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
   </div>
 
-  <h1 id="fusionMessage">Since you liked:</h1>
-  <h2 id="fusionMessage"><i>{{fusionPair[0]}}</i> and <i>{{fusionPair[1]}}</i>,</h2>
-  <h1 id="fusionMessage">You might like...</h1>
+  <h1 id="fusionMessage">Since you liked:   <span id="fusionPair">{{fusionPair[0]}} and {{fusionPair[1]}}</span></h1>
+  <!-- <h2 id="fusion-pairs" ng-repeat="item in fusionPair track by $index">
+    {{item}}
+  </h2> -->
+  <!-- <h2 id="fusionMessage"><i>{{fusionPair[0]}}</i> and <i>{{fusionPair[1]}}</i>,</h2> -->
+  <!-- <h3>and<h3>
+  <h2 id="fusionMessage"></h2> -->
+  <h2 id="fusionMessage">You might like...</h2>
 
-  <section id='myFavorites' class='container' ng-controller="FavoritesController">
-      <div class="container">
-        <h1 id="favorites"><span class="recipename">{{fusionRecipe.name}}<span></h1>
+  <section id='myFusion' class='container' ng-controller="FavoritesController">
+
+        <h1 id="fusion"><span class="recipename">{{fusionRecipe.name}}<span></h1>
+      <div class="fusionContainer">
         <div class="container">
           <div>
-            <img id="favoritesImage" src={{fusionRecipe.images[0].hostedLargeUrl}}>
+            <img id="fusionImage" src={{fusionRecipe.images[0].hostedLargeUrl}}>
           </div>
-          <div id="favoritesIngredients" class="row">
+          <div id="fusionIngredients" class="row">
             <div class="col-md-4">
-              <h2 id="favoritesIngredients">Ingredients</h2>
+              <h2 id="fusionIngredients">Ingredients</h2>
               <div id="favoritesIngredientsList" class="ingredients" ng-repeat="ingredient in fusionRecipe.ingredientLines track by $index">
                 {{ingredient}}
               </div>
@@ -29,7 +34,7 @@
           </div>
           </div>
         </div>
-        <hr id="favorites">
+
       </div>
   </section>
 
