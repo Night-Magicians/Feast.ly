@@ -6,10 +6,10 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
    <div class="jumbotron" id="homeview">
      <div class="container">
-       <h1><span id="homeviewBanner" class="headline">Ready For A Dinner Party?<span></h1>
-       <p class="feature-desc">Impress your friends with these quick and easy dishes!</p>
-       <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+       <h1 id="bannerTitle"><span id="homeviewBanner" class="headline">Ready For A Dinner Party?<span></h1>
+       <!-- <p id="homeview" class="feature-desc">Impress your friends with these quick and easy dishes!</p> -->
      </div>
+     <p id="learnMore"><a href="http://www.staggeringbeauty.com/" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
    </div>
 
   <!-- Search bar -->
@@ -18,7 +18,7 @@
 
     <form class="form-inline">
       <input id="searchField" ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
-      <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit"><a id="searchButton" href="#/results">Search</button>
+      <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit" id="searchButton">Search</button>
     </form>
    
    <!-- Results from search -->
@@ -35,8 +35,10 @@
   </div>
 
   <!-- Below are suggested recipes that load upon opening page -->
-  <hr class="suggestedRecipes">
-  <h2 class="suggestedRecipes">Need Suggestions?</h2>
+<!--   <hr class="suggestedRecipes"> -->
+  <div class="suggestedRecipes">
+    <h2 class="suggestedRecipes">Need Suggestions?</h2>
+  </div>
      <!-- Example row of columns -->
      <div class="row">
        <div ng-repeat="recipe in featured.matches" class="col-md-4">
